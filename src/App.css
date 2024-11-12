@@ -1,38 +1,190 @@
-.App {
-  text-align: center;
+body {
+  background-color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bothclocks {
+  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.App {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App .numbers {
+  position: absolute;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.numbers:nth-child(5) {
+  transform: rotate(30deg) translate(0,-130px);
+}
+
+.numbers:nth-child(6) {
+  transform: rotate(60deg) translate(0,-130px);
+}
+
+.numbers:nth-child(7) {
+  transform: rotate(90deg) translate(0,-130px);
+}
+
+.numbers:nth-child(8) {
+  transform: rotate(120deg) translate(0,-130px);
+}
+
+.numbers:nth-child(9) {
+  transform: rotate(150deg) translate(0,-130px);
+}
+
+.numbers:nth-child(10) {
+  transform: rotate(180deg) translate(0,-130px);
+}
+
+.numbers:nth-child(11) {
+  transform: rotate(210deg) translate(0,-130px);
+}
+
+.numbers:nth-child(12) {
+  transform: rotate(240deg) translate(0,-130px);
+}
+
+.numbers:nth-child(13) {
+  transform: rotate(270deg) translate(0,-130px);
+}
+
+.numbers:nth-child(14) {
+  transform: rotate(300deg) translate(0,-130px);
+}
+
+.numbers:nth-child(15) {
+  transform: rotate(330deg) translate(0,-130px);
+}
+
+.numbers:nth-child(16) {
+  transform: rotate(0deg) translate(0,-130px);
+}
+
+.spin {
+  height: 2px;
+  transform-origin: 100%;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  border-radius: 50px;
+  transform: rotate(90deg);
+  transition: transform 0.05s ease-in-out;
+}
+
+.second {
+  width: 50%;
+  background-color: red;
+}
+
+.minute {
+  width: 45%;
+  background-color: rgb(255, 255, 255);
+}
+
+.hour {
+  width: 35%;
+  background-color: white;
+  height: 4px;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.digital {
+  width: 300px;
+  border: 2px solid white;
+  border-radius: 30px;
+  color: rgb(13, 231, 13);
+  display: flex;
+  align-items: end;
+  justify-content: space-evenly;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+.hourdigit,.minutedigit {
+  font-size: 60px;
+  padding: 0;
+  margin: 0;
+}
+
+.divider {
+  font-size: 60px;
+}
+
+.seconddigit {
+  font-size: 30px;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.todolist {
+  width: 100%;
+  height: auto;
+  color: white;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.onetodo {
+  width: 500px;
+  border: 1px solid white;
+  height: 100px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.onetodo .icons i {
+  margin: 0 10px;
+  font-size: 25px;
+}
+
+.plusicon {
+  font-size: 30px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.inputtodo {
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  color: rgb(177, 177, 177);
+}
+
+.inputtodo:active,.inputtodo:focus {
+  border: none;
+  outline: none;
+  
+}
+
+.inputtodo::placeholder {
+  color: rgb(110, 110, 110);
 }
