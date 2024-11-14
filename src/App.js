@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import react,{useEffect, useRef, useState} from 'react';
+import React,{useEffect, useRef, useState} from 'react';
 
 function App() {
   const second = useRef(null);
